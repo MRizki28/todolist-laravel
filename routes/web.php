@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\ModelController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/get', [ModelController::class, 'index']);
+Route::post('/create/todolist', [ModelController::class, 'store']);
+
