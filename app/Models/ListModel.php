@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class ListModel extends Model
 {
     use HasFactory;
+    protected $table = 'tb_list';
+    protected $fillable = [
+        'id' , 'tanggal' , 'judul' , 'deskripsi' , 'created_at' , 'updated_at'
+    ];
 }
