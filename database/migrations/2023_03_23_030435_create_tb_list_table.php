@@ -15,6 +15,9 @@ class CreateTbListTable extends Migration
     {
         Schema::create('tb_list', function (Blueprint $table) {
             $table->id();
+            $table->string('tanggal');
+            $table->string('judul');
+            $table->text('deskripsi');
             $table->timestamps();
         });
     }
