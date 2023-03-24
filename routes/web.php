@@ -17,8 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/home', function () {
+    return view('home');
+});
 
 
 Route::get('/get', [ModelController::class, 'index']);
-Route::post('/create/todolist', [ModelController::class, 'store']);
+Route::post('/create/todolist', [ModelController::class, 'store'])->name('tambahData.todolist');
 
